@@ -5,14 +5,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title><?php echo 'My page Title'.$myvar; ?></title>
+        <title>My page Title <?php echo $myvar; ?></title>
     </head>
     <body>
         
-        
+        <h1> my number is
         <?php  
             $randNumber = rand(1,10);
-            echo 'my number is '.$randNumber;
+            echo $randNumber;
         ?>
+        </h1>
     </body>
 </html>
