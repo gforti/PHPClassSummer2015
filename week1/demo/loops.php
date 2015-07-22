@@ -5,15 +5,19 @@
         <title></title>
     </head>
     <body>
+        <ul>   
+        <?php for ($index = 1; $index < 10; $index++) { ?>
+            <li><?php echo $index ?> </li>    
+        <?php } ?>
+        </ul> 
+        
         <ul>
-            <li></li>
-        </ul>        
-        <?php
+        <?php for($index = 1; $index <= 10; $index++):?>
+            <li> <?php echo $index;?> </li>
+        <?php endfor; ?>
+        </ul>
         
-        for ($index = 1; $index < 10; $index++) {
-           echo $index;    
-        }
         
-        ?>
+        
     </body>
 </html>
