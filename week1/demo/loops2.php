@@ -6,19 +6,27 @@
     </head>
     <body>
         
-        <table>
+        <table border="1">
             <tr>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
             </tr>
+            <tr>
+               <td>1</td>
+                <td>2</td>
+                <td>3</td> 
+            </tr>
         </table>
         
         
-       <ul>
-        <?php for($index = 1; $index <= 10; $index++):?>
-            <li> <?php echo $index;?> </li>
+        
+       <table border="1">
+        <?php for($index = 1; $index <= 3; $index++):?>
+            <tr> 
+            
+            </tr>
         <?php endfor; ?>
-        </ul>
+        </table>
     </body>
 </html>
