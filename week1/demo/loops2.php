@@ -11,20 +11,15 @@
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
-            </tr>
-            <tr>
-               <td>1</td>
-                <td>2</td>
-                <td>3</td> 
-            </tr>
+            </tr>            
         </table>
-        
-        
-        
+        <hr />
        <table border="1">
-        <?php for($index = 1; $index <= 3; $index++):?>
+        <?php for($tr = 1; $tr <= 3; $tr++):?>
             <tr> 
-            
+            <?php for($td = 1; $td <= 3; $td++):?>
+                <td> <?php echo $td; ?> </td>
+            <?php endfor; ?>                
             </tr>
         <?php endfor; ?>
         </table>
