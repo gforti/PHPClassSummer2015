@@ -45,6 +45,8 @@
          * 
          * Triple equals ( === ) will check the value and the
          * variable type
+         * 
+         * Double equals ( == ) will only check the value.
          */
         $expression = true;
         ?>
