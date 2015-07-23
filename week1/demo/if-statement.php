@@ -6,10 +6,17 @@
     </head>
     <body>
         <?php
-            $a = 10;
-            $b = 7;
-            if ( ) {
-                
+            $a = 0;
+            $b = false;
+            /*
+             * 
+             */
+            if ( $a === $b ) {
+                echo 'A === B';
+            }
+            echo '<br />';
+            if ( $a == $b ) {
+                echo 'A == B';
             }
         
         ?>
