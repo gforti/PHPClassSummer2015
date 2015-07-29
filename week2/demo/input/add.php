@@ -24,6 +24,11 @@
                     ":datatwo" => $datatwo
                 );
                 
+                /*
+                 * empty()
+                 * isset()
+                 */
+                
                 if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
                     $results = 'Data Added';
                 }
