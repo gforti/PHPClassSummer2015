@@ -15,7 +15,7 @@
 
             $results = array();            
             if ($stmt->execute() && $stmt->rowCount() > 0) {
-                $results = $stmt->fetch(PDO::FETCH_ASSOC);                
+                $results = $stmt->fetchAll(PDO::FETCH_ASSOC); 
             }
             
         ?>
@@ -32,7 +32,7 @@
             <tr>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['dataone']; ?></td>
-                <td><?php echo $row['datatwo']; ?></td>
+                <td><?php echo $row['datatwo']; ?></td>            
             </tr>
         <?php endforeach; ?>
         </table>
