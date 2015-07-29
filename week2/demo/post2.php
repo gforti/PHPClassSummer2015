@@ -5,7 +5,7 @@
         <title></title>
     </head>
     <body>
-       <form method="post" action="#">
+       <form method="post" action="post-process.php">
             
             Data one <input type="text" value="" name="dataone" />
             <br />
@@ -15,5 +15,6 @@
             <input type="submit" value="Submit" />
             
         </form>
+        
     </body>
 </html>
