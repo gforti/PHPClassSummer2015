@@ -5,6 +5,14 @@
         <title></title>
     </head>
     <body>
+        <?php
+            
+        $dataoneVal = $_POST['dataone'];
+        $datatwoVal = $_POST['datatwo'];
+        echo $dataoneVal;
+        echo $datatwoVal;
+        
+        ?>
         <form method="post" action="#">
             
             Data one <input type="text" value="" name="dataone" />
@@ -17,8 +25,6 @@
         </form>
         
         
-        <?php
-        // put your code here
-        ?>
+        
     </body>
 </html>
