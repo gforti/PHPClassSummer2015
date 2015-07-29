@@ -6,20 +6,19 @@
     </head>
     <body>
         <?php
-            include './dbconnect.php';
-            include './functions.php';
-            
-            $db = getDatabase();
-            
-            $stmt = $db->prepare("SELECT * FROM test");
+        include './dbconnect.php';
+        include './functions.php';
 
-            $results = array();            
-            if ($stmt->execute() && $stmt->rowCount() > 0) {
-                $results = $stmt->fetchAll(PDO::FETCH_ASSOC); 
-            }
-            
+        $db = getDatabase();
+
+        $stmt = $db->prepare("SELECT * FROM test");
+
+        $results = array();
+        if ($stmt->execute() && $stmt->rowCount() > 0) {
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
         ?>
-        
+
         <table>
             <thead>
                 <tr>
@@ -28,14 +27,14 @@
                     <th>Data Two</th>
                 </tr>
             </thead>
-        <?php foreach($results as $row): ?>
-            <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['dataone']; ?></td>
-                <td><?php echo $row['datatwo']; ?></td>            
-            </tr>
-        <?php endforeach; ?>
+            <?php foreach ($results as $row): ?>
+                <tr>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['dataone']; ?></td>
+                    <td><?php echo $row['datatwo']; ?></td>            
+                </tr>
+            <?php endforeach; ?>
         </table>
-        
+
     </body>
 </html>
