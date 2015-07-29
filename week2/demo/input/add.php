@@ -7,39 +7,32 @@
     <body>
         <?php
             include './dbconnect.php';
+            include './functions.php';
             
-            $db = getDatabase();
+            $results = '';
             
-            $stmt = $db->prepare("INSERT INTO test SET dataone = :dataone, datatwo = :datatwo");
-        
-            $dataone = filter_input(INPUT_POST, '');
-            $datatwo = filter_input(INPUT_POST, '');
-        
-            $binds = array( 
-                ":dataone" => $dataone,
-                ":datatwo" => $datatwo
-                    );
-            
-            $results = array();
-            if ( $stmt->execute($binds) && $stmt->rowCount() > 0 ) {
-                $results = $stmt->fetch(PDO::FETCH_ASSOC);                       
+            if (isPostRequest()) {
+                $db = getDatabase();
+
+                $stmt = $db->prepare("INSERT INTO test SET dataone = :dataone, datatwo = :datatwo");
+
+                $dataone = filter_input(INPUT_POST, 'dataone');
+                $datatwo = filter_input(INPUT_POST, 'datatwo');
+
+                $binds = array(
+                    ":dataone" => $dataone,
+                    ":datatwo" => $datatwo
+                );
+                
+                if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
+                    $results = 'Data Added';
+                }
             }
-            
-            
         ?>
         
          
+        <h1><?php echo $results; ?></h1>
  
-
-        
-        <?php foreach($results as $row): ?>
-            
-        <?php endforeach; ?>
-        
-         
-        
-        
-        
         <form method="post" action="#">            
             Data one <input type="text" value="" name="dataone" />
             <br />
