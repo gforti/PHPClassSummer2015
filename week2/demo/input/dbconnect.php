@@ -1,5 +1,9 @@
 <?php
-
+/*
+ * Function to extablish a databse connection
+ * 
+ * @return PDO
+ */  
 function getDatabase() {
     $config = array(
         'DB_DNS' => 'mysql:host=localhost;port=3306;dbname=PHPClassSummer2015',
