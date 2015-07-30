@@ -1,8 +1,8 @@
 <?php
-/*
+/**
  * Function to extablish a databse connection
  * 
- * @return PDO
+ * @return PDO Object
  */  
 function getDatabase() {
     $config = array(
