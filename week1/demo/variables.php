@@ -10,6 +10,18 @@
  */
 
     $myvar = 'hello';
+    
+    
+    /*
+     * Variables are also loosely typed.  So you can change the 
+     * variable type on the fly.
+     * 
+     */
+    
+     $myvar = 10; // int
+     $myvar = true; //boolean
+     $myvar = array(); // array
+     $myvar = 'hello'; //string
 ?>
 <html>
     <head>
