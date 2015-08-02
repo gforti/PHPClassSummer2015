@@ -13,10 +13,17 @@
             'DB_PASSWORD' => 'summer15'
             );
         
-               
-        $db = new PDO($config['DB_DNS'], $config['DB_USER'], $config['DB_PASSWORD']);
-        $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-        
+         
+            try {
+                
+                $db = new PDO($config['DB_DNS'], $config['DB_USER'], $config['DB_PASSWORD']);
+                $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    
+            } catch (Exception $e) {
+                echo $e->getMessage();
+                exit();
+            }
+
         
         $stmt = $db->prepare("SELECT * FROM test");
         
@@ -26,7 +33,7 @@
         
         
         if ( $stmt->execute() && $stmt->rowCount() > 0 ) {
-             $results = $stmt->fetch(PDO::FETCH_ASSOC);
+             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
              var_dump($results);            
          }
         
