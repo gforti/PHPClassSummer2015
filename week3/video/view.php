@@ -38,7 +38,7 @@
                     <td><?php echo $row['dataone']; ?></td>
                     <td><?php echo $row['datatwo']; ?></td> 
                     <td><a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
-                    <td><a href="update.php">Update</a></td>
+                    <td><a href="update.php?id=<?php echo $row['id']; ?>">Update</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
