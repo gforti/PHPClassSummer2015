@@ -1,6 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] .
-    '/includes/magicquotes.inc.php';
+include_once('../../includes/magicquotes.inc.php');
 
 if (isset($_GET['add']))
 {
@@ -11,7 +10,7 @@ if (isset($_GET['add']))
   $id = '';
   $button = 'Add joke';
 
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+  include('../../includes/db.inc.php');
 
   // Build the list of authors
   try
@@ -56,7 +55,7 @@ if (isset($_GET['add']))
 
 if (isset($_GET['addform']))
 {
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+  include('../../includes/db.inc.php');
 
   if ($_POST['author'] == '')
   {
@@ -116,7 +115,7 @@ if (isset($_GET['addform']))
 
 if (isset($_POST['action']) and $_POST['action'] == 'Edit')
 {
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+  include('../../includes/db.inc.php');
 
   try
   {
@@ -203,7 +202,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Edit')
 
 if (isset($_GET['editform']))
 {
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+  include('../../includes/db.inc.php');
 
   if ($_POST['author'] == '')
   {
@@ -276,7 +275,7 @@ if (isset($_GET['editform']))
 
 if (isset($_POST['action']) and $_POST['action'] == 'Delete')
 {
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+  include('../../includes/db.inc.php');
 
   // Delete category assignments for this joke
   try
@@ -314,7 +313,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Delete')
 
 if (isset($_GET['action']) and $_GET['action'] == 'search')
 {
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+  include('../../includes/db.inc.php');
 
   // The basic SELECT statement
   $select = 'SELECT id, joketext';
@@ -365,7 +364,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'search')
 }
 
 // Display search form
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+include('../../includes/db.inc.php');
 
 try
 {

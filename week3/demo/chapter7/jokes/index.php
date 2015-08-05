@@ -1,6 +1,7 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/magicquotes.inc.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
+include_once '../includes/db.inc.php';
+include_once '../includes/magicquotes.inc.php';
 
 try
 {
