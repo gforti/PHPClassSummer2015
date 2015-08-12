@@ -8,14 +8,18 @@
         <?php
         
            include_once './functions/dbconnect.php';
-           include_once './functions/dbData.php';
-            
-          /* $results = getAllTestData(); */
            
-           $column = 'datatwo';
-           $search = 'test';
-          $results = searchTest($column, $search);
-            
+           
+           $db = dbconnect();
+           $column = 'dataone';
+           $order = 'ASC'; //DESC
+           $stmt = $db->prepare("SELECT * FROM test ORDER BY $column $order");
+
+             $results = array();
+             if ($stmt->execute() && $stmt->rowCount() > 0) {
+                 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+             }
+          
         ?>
         
         
