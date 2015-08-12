@@ -11,7 +11,7 @@
             <option value="eggs">Eggs</option>
             <option value="bread">Bread</option>
         </select>
-        
-        <input type="submit" value="Submit" />
+        <input type="hidden" name="action" value="Submit1" />
+        <input type="submit" value="Submit1" />
     </fieldset>    
 </form>

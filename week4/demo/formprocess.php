@@ -5,8 +5,21 @@
         <title></title>
     </head>
     <body>
+        <h1>My Forms</h1>
         <?php
-        // put your code here
+        
+        $action = filter_input(INPUT_POST, 'action');
+        
+        if ( $action === 'Submit1' ) {
+            echo 'submited form 1';
+        }
+        if ( $action === 'Submit2' ) {
+            echo 'submited form 2';
+        }
+        
+        include './forms/form1.php';
+        include './forms/form2.php';
+        
         ?>
     </body>
 </html>
