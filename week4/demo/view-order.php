@@ -2,14 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>        
+        <title></title>
+        
     </head>
     <body>
         <?php
         
            include_once './functions/dbconnect.php';
-           
-           
+                      
            $db = dbconnect();
            $column = 'dataone';
            $order = 'ASC'; //DESC
@@ -41,6 +41,7 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-           
+        
+       
     </body>
 </html>
