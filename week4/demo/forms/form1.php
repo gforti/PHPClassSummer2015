@@ -1,14 +1,17 @@
-<form>
+<form action="#" method="post">
     <fieldset>
-        <legend></legend>
-        <label></label>  
-        <input type="radio" />
-        <input type="radio" />
+        <legend>Form 1</legend>
+        
+        <label>Data one</label>  
+        <input type="radio" name="dataone" value="ford" />
+        <input type="radio" name="dataone" value="honda" />
 
-        <label></label>  
-        <select>
-            <option></option>
-            <option></option>
+        <label>Data 2</label>  
+        <select name="datatwo">
+            <option value="eggs">Eggs</option>
+            <option value="bread">Bread</option>
         </select>
+        
+        <input type="submit" value="Submit" />
     </fieldset>    
 </form>

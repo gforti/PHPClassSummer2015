@@ -1,9 +1,10 @@
-<form>
+<form action="#" method="post">
     <fieldset>
-        <legend></legend>
-        <label></label>
-        <input type="search" />
-        <input type="hidden" />
+        <legend>Form 2</legend>
+        <label>Data One</label>
+        <input name="dataone" type="search" placeholder="Search...." />
+        <input name="datatwo" value="data2" type="hidden" />
     
+        <input type="submit" value="Submit" />
     </fieldset>            
 </form>
