@@ -37,7 +37,7 @@
             </table>
 
         
-        
+            <p><a href="lastinsertID.php">Add States</a></p>
         
     </body>
 </html>
