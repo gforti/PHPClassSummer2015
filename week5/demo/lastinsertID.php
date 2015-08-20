@@ -32,9 +32,13 @@
                     /* get the last insert ID to use as the relational id */
                     $state_id = $db->lastInsertId();
                     var_dump($state_id);
-                                        
+                        
+                    /* prepare the next table to insert the values with the join ID */
                     $stmt = $db->prepare("INSERT INTO cities SET city = :city, state_id = :state_id");
  
+                    /* as we loop through the cities we can insert each 
+                     * city with a reference to the relational ID one at a time
+                     */
                     foreach ($cities as $city) {
                         $binds = array( ":city" => $city, ":state_id" => $state_id); 
                         $stmt->execute($binds);
