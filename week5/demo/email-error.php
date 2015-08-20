@@ -13,11 +13,19 @@
             
             $isValid = true;
             
-            if ( filter_var($email, FILTER_VALIDATE_EMAIL) === false ) {
-                $isValid = false;
+            if (isPostRequest()) {
+                if ( filter_var($email, FILTER_VALIDATE_EMAIL) === false ) {
+                    $isValid = false;
+                }
+                
+                
+                if ($isValid) {
+                    $email = '';
+                }
             }
+               
             
-                       
+            
         
         ?>
         
@@ -25,7 +33,7 @@
             <h1>Email is invalid</h1>
         <?php endif; ?>
          <form method="post" action="#">
-            Email<input type="text" name="email" value="" />
+            Email<input type="text" name="email" value="<?php echo $email; ?>" />
             <input type="submit" value="Submit" />
             </form>
     </body>

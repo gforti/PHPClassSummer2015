@@ -17,7 +17,7 @@
                 if ($stmt->execute() && $stmt->rowCount() > 0) {
                     $states = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 }
-                
+                $state_id = '';
                 if ( isPostRequest() ) {
                     
                     
@@ -36,7 +36,7 @@
                     
                     
                 }
-            
+                
         ?>
         
         <?php if( isset($error) ): ?>        
@@ -47,7 +47,14 @@
  
             <select name="state_id">
             <?php foreach ($states as $row): ?>
-                <option value="<?php echo $row['state_id']; ?>"><?php echo $row['state_name']; ?></option>
+                <option 
+                    value="<?php echo $row['state_id']; ?>"
+                    <?php if( intval($state_id) === $row['state_id']) : ?>
+                        selected="selected"
+                    <?php endif; ?>
+                >
+                    <?php echo $row['state_name']; ?>
+                </option>
             <?php endforeach; ?>
             </select>
 
