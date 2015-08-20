@@ -6,8 +6,8 @@
     </head>
     <body>
         <?php
-            include './functions/dbconnect.php';
-            include './functions/until.php';
+            require './functions/dbconnect.php';
+            require './functions/until.php';
             
             
                 $db = dbconnect();
@@ -29,6 +29,8 @@
 
                     if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
                         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    } else {
+                        $error = 'No Results found';
                     }
                     
                     
@@ -37,6 +39,10 @@
             
         ?>
         
+        <?php if( isset($error) ): ?>        
+            <h1><?php echo $error;?></h1>
+        <?php endif; ?>
+            
         <form method="post" action="#">
  
             <select name="state_id">
@@ -65,6 +71,8 @@
             </table>
 
         <?php endif; ?>
+            
+            
 
         
         
