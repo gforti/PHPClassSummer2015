@@ -10,12 +10,10 @@
         session_start();
         
         include_once './header.php';
+        include_once './functions.php';
         
-        if ( !isset($_SESSION['loggedin']) 
-                || $_SESSION['loggedin'] === false 
-            ) {
-            header('Location: passcode.php');
-            //die('Access not allowed');
+        if ( !isLoggedIn() ) {
+            die('Access not allowed');
         }
         
         
