@@ -24,7 +24,7 @@ function isValidCategory($value) {
         return false;
     }
     
-    if ( preg_match("^[a-zA-Z]+$", $value) === false ) {
+    if ( preg_match("/^[a-zA-Z]+$/", $value) == false ) {
         return false;
     }
     
