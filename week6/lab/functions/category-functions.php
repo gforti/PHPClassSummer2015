@@ -18,3 +18,15 @@ function createCategory($value) {
     return false;
     
 }
+
+function isValidCategory($value) {
+    if ( empty($value) ) {
+        return false;
+    }
+    
+    if ( preg_match("^[a-zA-Z]+$", $value) === false ) {
+        return false;
+    }
+    
+    return true;
+}
