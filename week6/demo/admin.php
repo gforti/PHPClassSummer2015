@@ -12,7 +12,7 @@
         include_once './header.php';
         
         if ( !isset($_SESSION['loggedin']) 
-                || $_SESSION['loggedin'] !== true 
+                || $_SESSION['loggedin'] === false 
             ) {
             header('Location: passcode.php');
             //die('Access not allowed');
