@@ -29,3 +29,15 @@ function createProduct($category_id, $product, $price, $image ) {
     
     
 }
+
+function isValidProduct($value) {
+    if ( empty($value) ) {
+        return false;
+    }
+}
+function isValidPrice($value) {
+    if ( empty($value) ) {
+        return false;
+    }
+}
+
