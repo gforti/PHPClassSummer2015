@@ -36,9 +36,7 @@
         
          <h1>Add Category</h1>
         
-        <?php if ( isset($results) ) : ?>
-            <h2><?php echo $results; ?></h2>
-        <?php endif; ?>
+       <?php include '../../includes/results.html.php'; ?>
                
         <form method="post" action="#">
             Category Name : <input type="text" name="category" value="" />

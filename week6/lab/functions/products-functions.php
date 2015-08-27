@@ -34,10 +34,12 @@ function isValidProduct($value) {
     if ( empty($value) ) {
         return false;
     }
+    return true;    
 }
 function isValidPrice($value) {
     if ( empty($value) ) {
         return false;
     }
+    return true;
 }
 

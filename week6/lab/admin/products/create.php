@@ -23,9 +23,7 @@
             $product = filter_input(INPUT_POST, 'product');
             $price = filter_input(INPUT_POST, 'price');
             $image = filter_input(INPUT_POST, 'image');
-            
-            var_dump($product);
-            var_dump($price);
+                        
             $errors = array();
             
             if ( !isValidProduct($product) ) {
@@ -36,6 +34,16 @@
                 $errors[] = 'Price is not Valid';
             }
             
+            if ( count($errors) == 0 ) {
+                
+                if ( createProduct($category_id, $product, $price, $image ) ) {
+                    $results = 'Product Added';
+                } else {
+                    $results = 'Product was not Added';
+                }
+                
+            }
+            
         }
         
         
@@ -44,13 +52,16 @@
         
         <h1>Add Product</h1>
         
-        <?php if ( isset($errors) && count($errors) ) : ?>
+        <?php if ( isset($errors) && count($errors) > 0 ) : ?>
             <ul>
                 <?php foreach ($errors as $error): ?>
                 <li><?php echo $error; ?></li>
                 <?php endforeach; ?>
             </ul>
         <?php endif; ?>
+        
+        
+        <?php include '../../includes/results.html.php'; ?>
                
         <form method="post" action="#">
             
