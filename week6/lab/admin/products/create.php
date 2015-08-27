@@ -13,6 +13,8 @@
         include_once '../../functions/products-functions.php';
         include_once '../../functions/until.php';
         
+        include_once '../../includes/access-required.html.php';
+        
         
         $categories = getAllCategories();
         

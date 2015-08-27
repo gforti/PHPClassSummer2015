@@ -11,6 +11,7 @@
         include_once '../../functions/category-functions.php';
         include_once '../../functions/until.php';
         
+        include_once '../../includes/access-required.html.php';
         
         if ( isPostRequest() ) {
             
