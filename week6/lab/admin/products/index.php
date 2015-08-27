@@ -6,7 +6,8 @@
     </head>
     <body>
         <?php
-            include_once '../../includes/access-required.html.php';
+            require_once '../../includes/session-start.req-inc.php';
+            require_once '../../includes/access-required.html.php';
         ?>
         
         <p><a href="create.php">Create</a></p>
