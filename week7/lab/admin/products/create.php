@@ -38,7 +38,7 @@
                 $errors[] = 'Price is not Valid';
             }
                         
-            if ( false === $image ) {
+            if ( empty($image) ) {
                 $errors[] = 'image could not be uploaded';
             }
             

@@ -79,7 +79,7 @@ function isValidPrice($value) {
 
 function uploadProductImage() {
     
-    $imageName = false;
+    $imageName = '';
     
     try {
 

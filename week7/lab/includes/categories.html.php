@@ -6,7 +6,8 @@
 <ul>    
     <?php foreach ($allCategories as $row): ?>
         <li><a href="?cat=<?php echo $row['category_id']; ?>"><?php echo $row['category']; ?></a></li>    
-    <?php endforeach; ?>        
-<?php endif; ?>
+    <?php endforeach; ?> 
 </ul>
+<?php endif; ?>
+
        
